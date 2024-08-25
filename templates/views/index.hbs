@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WEATHER HOME</title> {{!-- Window/Tab name --}}
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="icon" href="/img/weather-91.png">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            {{!-- <h1>{{title}}</h1> this is from app.js --}}
+            <p>Use this site to get your weather!</p>
+
+            <form>
+                <input placeholder="City name">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+
+        </div>
+
+        {{>footer}}
+
+        <script src="/js/app.js"></script> {{!-- Make sure JavaScript run at the end of HTML --}}
+    </body>
+</html>

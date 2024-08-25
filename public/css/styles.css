@@ -1,0 +1,61 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;     /* put space outside of the box */
+    padding: 0 16px;    /* put space inside of the box */
+
+    display: flex;      /* Enable FLEXBOX in css*/
+    flex-direction: column; /* Set flex direction to vertical */
+    min-height: 100vh;      /* Set flex box 100% viewport height, = browser height  */
+}
+
+.main-content {
+    flex-grow:1 ;   /* Make flex box bigger to push footer to the bottom */
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+header a {  /* Style of links in the header */
+    /* targeting links in header*/
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none; /* remove underline of links */
+}
+
+/* this applies to all images
+img {
+    width: 100px;
+}   /* */
+
+/* use class selector to change style */
+.portrait {
+    width: 50px;
+}   /* */
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
