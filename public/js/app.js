@@ -33,5 +33,5 @@ weatherForm.addEventListener('submit', (e)=>{
                 messageTwo.textContent = ""
             }
         })
-    })  // */
+    })  // */e
 })
