@@ -45,7 +45,7 @@ app.get('', (req, res)=>{
 app.get('/about', (req, res)=>{
     res.render('about', {
         title: 'About the App', 
-        name: 'Sophie Hannah'
+        name: 'Sophie and Hannah Hsiao'
     })
 })
 
