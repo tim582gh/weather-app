@@ -1,6 +1,7 @@
 // const { response } = require('express')
 
 console.log('Client side javascrip is loaded')
+const webUrl = 'https://weather-app-ten-omega-23.vercel.app'
 
 // Dynamic Replacement Based on Environment =====
 let apiBaseUrl;
@@ -9,7 +10,7 @@ let apiBaseUrl;
 if (window.location.hostname === 'localhost') {
     apiBaseUrl = 'http://localhost:3000';  // Use your local server address
 } else {
-    apiBaseUrl = 'https://weather-app-ten-omega-23.vercel.app';  // Use your live website address
+    apiBaseUrl = webUrl;  // Use your live website address
 }
 // ==============================================
 
@@ -30,8 +31,8 @@ weatherForm.addEventListener('submit', (e)=>{
     const location = searchElement.value
 
     // const fetchUrl = 'http://localhost:3000/weather?search=' + searchElement.value
-    // const fetchUrl = apiBaseUrl + '/weather?search=' + searchElement.value  // Not working
-    const fetchUrl = 'https://weather-app-ten-omega-23.vercel.app/weather?search=' + searchElement.value
+    const fetchUrl = apiBaseUrl + '/weather?search=' + searchElement.value  // Not working
+    // const fetchUrl = 'https://weather-app-ten-omega-23.vercel.app/weather?search=' + searchElement.value
 
     fetch(fetchUrl).then((response)=>{
         response.json().then((data)=> {

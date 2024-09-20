@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')  // use hbs to create partial template for all pages
 // hbs needs another folder to keep partial templates
+const webUrl = 'https://weather-app-ten-omega-23.vercel.app'
+
 
 // to make the following modules work =====
 // need to: npm i request   ===============
@@ -12,6 +14,24 @@ const getweather = require('../utils/getweather')
 
 
 const app = express()   // using rexpress to run a server
+
+
+// This is to fix the "Cross-Origin Request Blocked error" encountered on Vercel
+// npm install cors, first ======================
+// const express = require('express');      //repeated
+const cors = require('cors');
+// const app = express();       //repeated
+
+// Use CORS to allow cross-origin requests
+// app.use(cors());
+
+// If you want to restrict it to specific origins (such as only allowing requests from your live website), you can configure CORS with more options
+app.use(cors({
+    origin: webUrl  // Replace with your website's URL
+  }));
+  
+// ==============================================
+
 
 // ========== Define paths for Express config ==========
 // publicPathDir is the folder where the index.html is
