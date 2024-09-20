@@ -2,6 +2,18 @@
 
 console.log('Client side javascrip is loaded')
 
+// Dynamic Replacement Based on Environment =====
+let apiBaseUrl;
+
+// Check if the current hostname is localhost
+if (window.location.hostname === 'localhost') {
+    apiBaseUrl = 'http://localhost:3000';  // Use your local server address
+} else {
+    apiBaseUrl = 'https://weather-app-ten-omega-23.vercel.app';  // Use your live website address
+}
+// ==============================================
+
+
 // Fecth API is a browser based API, not accessible in Node.js
 // It can only be used in the client side.
 // Fecth API is asynchronous
@@ -17,8 +29,9 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault()  // Prevent from default behavior, which is refresh the page.
     const location = searchElement.value
 
-    const fetchUrl = 'http://localhost:3000/weather?search=' + searchElement.value
-
+    // const fetchUrl = 'http://localhost:3000/weather?search=' + searchElement.value
+    const fetchUrl = apiBaseUrl + '/weather?search=' + searchElement.value
+    
     fetch(fetchUrl).then((response)=>{
         response.json().then((data)=> {
             if (!data.error) {
