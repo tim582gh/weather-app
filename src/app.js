@@ -23,14 +23,14 @@ const cors = require('cors');
 // const app = express();       //repeated
 
 // Use CORS to allow cross-origin requests
-// app.use(cors());
+app.use(cors());
 
 // If you want to restrict it to specific origins (such as only allowing requests from your live website), you can configure CORS with more options
-app.use(cors({
+/* app.use(cors({
     origin: webUrl  // Replace with your website's URL
   }));
   
-// ==============================================
+// ============================================== */
 
 
 // ========== Define paths for Express config ==========

@@ -31,7 +31,7 @@ weatherForm.addEventListener('submit', (e)=>{
     const location = searchElement.value
 
     // const fetchUrl = 'http://localhost:3000/weather?search=' + searchElement.value
-    const fetchUrl = apiBaseUrl + '/weather?search=' + searchElement.value  // Not working
+    const fetchUrl = apiBaseUrl + '/weather?search=' + searchElement.value
     // const fetchUrl = 'https://weather-app-ten-omega-23.vercel.app/weather?search=' + searchElement.value
 
     fetch(fetchUrl).then((response)=>{
